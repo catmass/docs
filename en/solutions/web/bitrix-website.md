@@ -1,11 +1,11 @@
 ---
 title: "Website on Bitrix - Installation and Configuration"
-description: "In this manual, we will tell you how to deploy and configure a site on Bitrix in the cloud. 1C-Bitrix is a web project management system from 1C-Bitrix. With its help you can manage the structure and content of your site, without special knowledge of programming and layout. "
+description: "In this manual, we will tell you how to deploy and configure a site on Bitrix in the cloud. 1C-Bitrix is a web project management system from 1C-Bitrix. You can use it to manage the structure and content of your site, without special knowledge of programming and layout. "
 ---
 
 # 1C-Bitrix website
 
-[1C-Bitrix: Site Management](https://www.1c-bitrix.ru/products/cms/) is a web project management system from 1C-Bitrix. It lets you easily manage the structure and content of your website without knowing programming or design. 1C-Bitrix: Site Management does the technical work for you.
+[1C-Bitrix: Site Management](https://www.1c-bitrix.ru/products/cms/) is a web project management system from 1C-Bitrix. It lets you easily manage the structure and content of your website even if you don't have programming or design experience. 1C-Bitrix: Site Management does the technical work for you.
 
 In this tutorial, you'll deploy and configure a website using the 1C-Bitrix information portal template. During the configuration, you'll create a VM in Yandex.Cloud, deploy the 1C-Bitrix image on it, and launch the necessary services. As a database, you'll deploy a managed MySQL database cluster and ensure its fault tolerance.
 
@@ -43,7 +43,7 @@ To create a VM:
 1. On the **Folder dashboard** folder page, in the [management console]({{ link-console-main }}), click **Create resource** and select **Virtual machine**.
 1. In the **Name** field, enter a name for the VM, such as `bitrixwebsite`.
 1. Leave the default availability zone.
-1. Under **Images from {{ marketplace-name }}**, select the ** Ubuntu 18.04 LTS** image.
+1. Under **Images from {{ marketplace-name }}**, select the **Ubuntu 18.04 LTS** image.
 1. Under **Disks**, select an SSD with 20 GB.
 1. Under **Computing resources**:
    * Choose a [platform](../../compute/concepts/vm-platforms.md) for the VM.
@@ -84,9 +84,9 @@ To create a MySQL database cluster:
 
 1. Under **Hosts**, change the **Availability zone** for the database. To do this, click ![pencil](../../_assets/pencil.svg) in the line with host details. In the window that opens, select the desired availability zone and click **Save**.
 
-   We recommend selecting the same availability zone as when you created the VM. This reduces latency between the VM and database.
+   We recommend selecting the same availability zone as when you created the VM. This will reduce latency between the VM and database.
 
-1. To make your database fault-tolerant, you can add more hosts for it. To do this, select **Add host** and specify the availability zone to place it in.
+1. To make your database fault-tolerant, you can add more hosts by selecting **Add host** and specifying the availability zone to place it in.
 
 1. Leave the other fields as they are.
 
@@ -109,7 +109,7 @@ To configure the server to work with 1C-Bitrix:
    To find out the public IP address of your VM, on the folder page in the [management console]({{ link-console-main }}):
    1. Choose the **Compute Cloud** section.
    1. Click on the name of your VM (in this example, it's **bitrixwebsite**).
-   1. A window opens with general information about your VM. You can find the public IP address in the **Public IPv4** field under **Network**.
+   1. A window will open with general information about your VM. You can find the public IP address in the **Public IPv4** field under **Network**.
 
 1. Get administrator rights.
 
@@ -242,11 +242,11 @@ Install and configure 1C-Bitrix:
 
 1. Select a color and click **Next**.
 
-1. Fill in all the fields according to your website requirements and click **Install**. This starts installing and configuring all system components. Wait for it to complete.
+1. Fill in all the fields according to your website requirements and click **Install**. This will start installating and configuring all system components. Wait for it to complete.
 
-1. After a while, a page appears saying that the system is installed and configured. To start working with the website, click **Go to site**.
+1. After a while, a page will appear saying that the system is installed and configured. To start working with the website, click **Go to site**.
 
-1. You're in content editing mode in the web interface of the system that is completely ready-to-use.
+1. You are now in content editing mode in the web interface of the system, which is completely ready-to-use.
 
 1. To see the website homepage from a user's point of view, click **Exit** in the upper-right corner of the page to exit from your website admin panel and go to `http://<VM-public-IP-address>/`. To return to edit mode, log in to the website using the 1C-Bitrix administrator credentials.
 
